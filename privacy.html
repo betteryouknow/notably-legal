@@ -10,35 +10,47 @@
 <header class="site"><div class="wrap"><strong>Notably</strong> · Privacy Policy</div></header>
 <div class="wrap">
   <h1>Privacy Policy</h1>
-  <p class="muted">Effective date: June 27, 2026</p>
+  <p class="muted">Effective date: July 9, 2026</p>
 
-  <p>Notably (“we”, “us”, the “App”) is built privacy-first. This policy explains exactly what
-  data the App handles and what it does not. In plain terms: <strong>your recordings and
-  transcription stay on your device</strong>, and we never sell your data.</p>
+  <p>Notably (“we”, “us”, the “App”) explains here exactly what data the App handles and what it
+  does not. In plain terms: your original recordings are <strong>stored only on your device</strong>,
+  we transcribe them using a third-party AI service that <strong>does not retain your data</strong>,
+  and we never sell your data.</p>
 
-  <h2>1. On-device recording &amp; transcription</h2>
+  <h2>1. Recording &amp; cloud transcription</h2>
   <ul>
-    <li><strong>Audio never leaves your device.</strong> Recording and speech-to-text transcription run entirely on your device using Apple’s on-device Speech framework.</li>
-    <li>Audio files, transcripts, notes, action items, and chat history are <strong>stored locally</strong> on your device only. We do not have a copy.</li>
-    <li>You can delete any recording, or all data, at any time in <em>Settings → Delete all data</em>.</li>
+    <li>Your original audio recordings, transcripts, notes, action items, and chat history are
+    <strong>stored locally on your device</strong>. We do not keep a copy of your recordings.</li>
+    <li>To turn a recording into a transcript and notes, the App sends your <strong>audio recording
+    and its transcript text</strong> over an encrypted connection to a third-party AI provider —
+    <strong>Google (the Gemini API)</strong> — through our own secure backend proxy. See Section&nbsp;2.</li>
+    <li>The App also uses Apple’s Speech framework on your device to show a live draft transcript
+    while you record. This on-device draft is replaced by the final cloud transcript.</li>
+    <li>You must agree to cloud transcription in the App before any audio is sent, and you can delete
+    any recording, or all data, at any time in <em>Settings → Delete all data</em>.</li>
   </ul>
 
-  <h2>2. AI notes &amp; chat (transcript text only)</h2>
-  <p>When you choose to generate AI notes (summary, key points, decisions, action items) or use
-  “ask this meeting” chat, the App sends the <strong>transcript text</strong> (not your audio) to our
-  processing service, which forwards it to a third-party large-language-model provider to produce
-  the result. We:</p>
+  <h2>2. What we send to the AI provider, and to whom</h2>
+  <p>When you record (and when you generate AI notes or use “ask this meeting” chat), the App sends
+  the data below to <strong>Google’s Gemini API</strong>, reached through our secure backend proxy:</p>
   <ul>
-    <li>send only the transcript text needed to produce your notes or answer;</li>
-    <li><strong>do not retain</strong> transcript text on our servers after the request is processed (it is not logged or stored);</li>
-    <li>never send your audio, your contacts, or your identity with these requests.</li>
+    <li><strong>What is sent:</strong> your audio recording; its transcript text; and your chat
+    questions about a meeting.</li>
+    <li><strong>Who it is sent to:</strong> Google, as the provider of the Gemini API, over an
+    encrypted connection.</li>
+    <li><strong>Why:</strong> solely to produce your transcript, notes, and chat answers.</li>
+    <li><strong>Retention:</strong> the data is processed in-request and is <strong>not retained</strong>
+    by our backend or by the provider after the request is processed, and it is
+    <strong>not used to train AI models</strong>.</li>
+    <li>We never send your contacts or your identity with these requests, and we do not require an account.</li>
   </ul>
-  <p>If you never use AI notes or chat, no transcript text is ever transmitted off your device.</p>
+  <p>You are asked for explicit consent inside the App before any audio or transcript is sent. If you
+  do not consent, your recordings are not transcribed.</p>
 
   <h2>3. Permissions we request</h2>
   <ul>
     <li><strong>Microphone</strong> — to record meetings, lectures, and voice memos.</li>
-    <li><strong>Speech Recognition</strong> — to transcribe your recordings on your device.</li>
+    <li><strong>Speech Recognition</strong> — to show a live draft transcript on your device while you record.</li>
     <li><strong>Reminders</strong> (optional) — only if you choose to turn an action item into a system reminder.</li>
   </ul>
   <p>You can change these in the iOS Settings app at any time.</p>
